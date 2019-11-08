@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import StudentList from './studentList';
+import Stopwatch from './stopwatch';
 
 function App() {
   return (
     <div className="App">
-      <StudentList />
+      <Stopwatch />
     </div>
   );
 }

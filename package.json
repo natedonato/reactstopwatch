@@ -1,8 +1,8 @@
 {
-  "name": "studentinfo",
+  "name": "stopwatch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://natedonato.com/studentInfo",
+  "homepage": "https://natedonato.com/reactstopwatch",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -14,7 +14,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --git git"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +32,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.1.0"
   }
 }

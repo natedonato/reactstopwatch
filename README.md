@@ -1,12 +1,10 @@
 ## Student Info App
-Live demo link
-
-# How to install and run
-To install this application navigate your termal to the root directory of this project and run the command "npm install".
-Then to view run command "npm run start" and it should automatically open a new browser window pointing to localhost:3000 where the app can be viewed.
+Live demo link: natedonato.com/reactstopwatch
 
 # Description
-This is a web app that allows you to view a list of students and their associated data (test averages, email addresses, etc).  Each student can be expanded with the plus shaped icon on the right to view extended test score details and tags.
-Students can be filtered by name (first or last) and/or by tag with the search bars.
+A simple stopwatch component with buttons to start, stop, and reset.  
 
-Student data is fetched from a static json file simulating an API call.
+The Start button starts the timer, and does nothing if the timer is already running.
+The Stop button stops the timer if it is already running, and does nothing if the timer is not currently ticking.
+The Reset button resets the timer to zero but does NOT stop the timer from continuing to tick if it is already running.
+The Stop and Reset button both resets the timer to zero and stops the timer if it is currently running.
