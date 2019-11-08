@@ -88,6 +88,8 @@ class Stopwatch extends React.Component {
             <button onClick = {this.handleStop} > Stop </button> 
             <button onClick = {this.handleReset} > Reset </button> 
             <button onClick = {this.handleStopAndReset}> Stop And Reset </button> 
+            <p> By Nate Donato</p>
+            < a href = "https://github.com/natedonato/reactstopwatch/"> View source and documentation on Github</a>
         </div>
         );
     }
