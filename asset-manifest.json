@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reactstopwatch/static/css/main.789f8e64.chunk.css",
+    "main.js": "/reactstopwatch/static/js/main.572c6c4b.chunk.js",
+    "main.js.map": "/reactstopwatch/static/js/main.572c6c4b.chunk.js.map",
+    "runtime~main.js": "/reactstopwatch/static/js/runtime~main.572a1a00.js",
+    "runtime~main.js.map": "/reactstopwatch/static/js/runtime~main.572a1a00.js.map",
+    "static/js/2.4e81ba5b.chunk.js": "/reactstopwatch/static/js/2.4e81ba5b.chunk.js",
+    "static/js/2.4e81ba5b.chunk.js.map": "/reactstopwatch/static/js/2.4e81ba5b.chunk.js.map",
+    "index.html": "/reactstopwatch/index.html",
+    "precache-manifest.5b0081e295a42f3cfbfbf8397af8d2b2.js": "/reactstopwatch/precache-manifest.5b0081e295a42f3cfbfbf8397af8d2b2.js",
+    "service-worker.js": "/reactstopwatch/service-worker.js",
+    "static/css/main.789f8e64.chunk.css.map": "/reactstopwatch/static/css/main.789f8e64.chunk.css.map"
+  }
+}
