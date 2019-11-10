@@ -3,8 +3,12 @@ Online stopwatches implemented using React.
 
 [View Live Demo](https://natedonato.com/reactstopwatch)
 
+
+
 ## Description
 This page allows users to create and run multiple online stopwatches simultaneously.
+
+![screenshot](https://github.com/natedonato/reactstopwatch/raw/master/screenshot.png "Screenshot")
 
 Once a timer is started buttons will appear to pause, resume, or reset the timer to zero.  Timers can be added and removed, and each will have a unique number at the top.  Numbers reset to One if all timers are removed.
 
