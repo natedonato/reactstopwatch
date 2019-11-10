@@ -108,3 +108,6 @@ class Stopwatch extends React.Component {
 
 export default Stopwatch;
 ```
+
+Things to add in future updates:
+-use Date.now with a more frequent interval to more accurately detect time passing and better synchronize ticking of multiple timers.
