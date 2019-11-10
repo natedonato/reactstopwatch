@@ -6,19 +6,28 @@ class Stopwatch extends React.Component {
         this.state = {
             seconds: 0,
             minutes: 0,
-            interval: null
+            interval: null,
+            started: false,
         };
 
         this.handleStart = this.handleStart.bind(this);
         this.tick = this.tick.bind(this);
         this.handleStop = this.handleStop.bind(this);
         this.handleReset = this.handleReset.bind(this);
-        this.handleStopAndReset = this.handleStopAndReset.bind(this);
+        this.toggleStart = this.toggleStart.bind(this);
     }
 
     componentWillUnmount(){
         if(this.state.interval){
             clearInterval(this.state.interval);
+        }
+    }
+
+    toggleStart(){
+        if(this.state.interval){
+            this.handleStop();
+        }else{
+            this.handleStart();
         }
     }
 
@@ -28,7 +37,8 @@ class Stopwatch extends React.Component {
         } else {
             let interval = setInterval(this.tick, 1000);
             this.setState({
-                interval
+                interval,
+                started: true
             });
         }
     }
@@ -43,15 +53,12 @@ class Stopwatch extends React.Component {
     }
 
     handleReset() {
+        this.handleStop();
         this.setState({
             seconds: 0,
-            minutes: 0
+            minutes: 0,
+            started: false
         });
-    }
-
-    handleStopAndReset() {
-        this.handleStop();
-        this.handleReset();
     }
 
     tick() {
@@ -87,17 +94,26 @@ class Stopwatch extends React.Component {
     }
 
     render() {
+        let buttontext = this.state.interval ? "STOP" : "RESUME";
+        let buttonColor = this.state.interval ? "RED" : "GREEN";
+
         return ( 
         <div className = "stopwatch">
+            < button className = 'x' onClick = {this.props.removeTimer} > X </button>
+            <div> Timer #{this.props.id + 1}
+            </div>
             <h1> {this.stringify()} </h1> 
-            <button onClick = {this.handleStart} > Start </button> 
-            <button onClick = {this.handleStop} > Stop </button> 
-            <button onClick = {this.handleReset} > Reset </button> 
-            <button onClick = {this.handleStopAndReset}> Stop And Reset </button> 
-            
-            <button onClick={this.props.removeTimer}> REMOVE TIMER </button>
-            {/* <p> By Nate Donato</p>
-            < a href = "https://github.com/natedonato/reactstopwatch/"> View source and documentation on Github</a> */}
+
+            <div className = 'timerControls'>
+                {this.state.started ? 
+                <>
+                    <button className={buttonColor} onClick = {this.toggleStart}>{buttontext}</button>
+                    < button onClick = {this.handleReset} > RESET < /button>
+                </> 
+                : < button onClick = {this.handleStart} > START </button> }
+            </div>
+
+           
         </div>
         );
     }

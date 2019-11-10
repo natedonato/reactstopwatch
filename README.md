@@ -1,15 +1,14 @@
 # Stopwatch
-[Live demo link](https://natedonato.com/reactstopwatch)
+Online stopwatches implemented using React.
+
+[View Live Demo](https://natedonato.com/reactstopwatch)
 
 ## Description
-A simple stopwatch component with buttons to start, stop, and reset.  
+This page allows users to create and run multiple online stopwatches simultaneously.
 
-The Start button starts the timer, and does nothing if the timer is already running.
-The Stop button stops the timer if it is already running, and does nothing if the timer is not currently ticking.
-The Reset button resets the timer to zero but does NOT stop the timer from continuing to tick if it is already running.
-The Stop and Reset button both resets the timer to zero and stops the timer if it is currently running.
+Once a timer is started buttons will appear to pause, resume, or reset the timer to zero.  Timers can be added and removed, and each will have a unique number at the top.  Numbers reset to One if all timers are removed.
 
-Here is the code behind the stopwatch class:
+Curious how you can build your own timers in React?  Check out this code snippet for a basic stopwatch component:
 
 ```javascript
 import React from 'react';
@@ -27,7 +26,12 @@ class Stopwatch extends React.Component {
         this.tick = this.tick.bind(this);
         this.handleStop = this.handleStop.bind(this);
         this.handleReset = this.handleReset.bind(this);
-        this.handleStopAndReset = this.handleStopAndReset.bind(this);
+    }
+
+    componentWillUnmount(){
+        if(this.state.interval){
+            clearInterval(this.state.interval);
+        }
     }
 
     handleStart() {
@@ -51,15 +55,11 @@ class Stopwatch extends React.Component {
     }
 
     handleReset() {
+        this.handleStop();
         this.setState({
             seconds: 0,
             minutes: 0
         });
-    }
-
-    handleStopAndReset() {
-        this.handleStop();
-        this.handleReset();
     }
 
     tick() {
@@ -96,13 +96,11 @@ class Stopwatch extends React.Component {
 
     render() {
         return ( 
-        <div className = "stopwatch">
+        <div>
             <h1> {this.stringify()} </h1> 
             <button onClick = {this.handleStart} > Start </button> 
             <button onClick = {this.handleStop} > Stop </button> 
-            <button onClick = {this.handleReset} > Reset </button> 
-            <button onClick = {this.handleStopAndReset}> Stop And Reset </button> 
-            <a href=""></a>
+            <button onClick = {this.handleReset}> Reset </button> 
         </div>
         );
     }

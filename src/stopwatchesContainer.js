@@ -11,7 +11,12 @@ class StopwatchesContainer extends React.Component{
 
     addTimer = () => {
         let timers = this.state.timers;
+
         let lastId = timers[timers.length - 1];
+        if(timers.length === 0){
+            lastId = -1;
+        }
+
         timers.push(lastId + 1);
         this.setState({timers});
     }
@@ -24,14 +29,16 @@ class StopwatchesContainer extends React.Component{
 
     render(){
         const timers = this.state.timers.map( id =>
-            <Stopwatch key={id} removeTimer={()=>this.removeTimer(id)}/>
+            <Stopwatch key={id} id={id} removeTimer={()=>this.removeTimer(id)}/>
             );
 
         return(
-        <div>
-            <button onClick={this.addTimer} > Add Timer</button>
+        <>
             {timers}
-        </div>
+            <div style={{height: '140px', width: '60px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}> 
+                <button onClick = {this.addTimer} className="addButton"> + ADD</button>
+            </div>
+        </>
         )
     }
 }

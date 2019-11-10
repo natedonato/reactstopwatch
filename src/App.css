@@ -1,13 +1,119 @@
+html{
+  background-color: #e6e6e6;
+}
+
 .App {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* align-items: center; */
+  background-color: #e6e6e6;
+  padding: 20px;
+}
+
+.addButton{
+  /* width: 140px;
+  height: 140px; */
+  border-radius: 100%;
+}
+
+h1{
+  margin: 0px 0px;
+  padding: 0px;
+  width: 130px;
+  text-align: center;
+  cursor: default;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  font-size: 10px;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+
+}
+
+button:focus{
+  outline: none;
 }
 
 .stopwatch{
+  width: 140px;
+  height: 120px;
+  position: relative;
+  padding: 5px 20px;
+  margin: 10px;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.stopwatch:after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stopwatch:hover {
+  border-color: black;
+  transform: scale(1.05, 1.05);
+}
+
+.stopwatch:hover::after {
+  opacity: 1;
+}
+
+.x{
+  padding: 4px 6px;
+  font-weight: 700;
+  border: none;
+  background: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: red;
+  opacity: 0.5;
+}
+
+.x:focus{
+  outline: none;
+}
+
+.x:hover{
+  opacity: 1;
+}
+
+.timerControls{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timerControls > button{
+  flex-grow: 1;
+}
+
+
+.RED{
+  color: red;
+}
+
+.GREEN{
+  color: green;
 }
