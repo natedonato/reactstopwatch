@@ -8,7 +8,7 @@ This page allows users to create and run multiple online stopwatches simultaneou
 
 Once a timer is started buttons will appear to pause, resume, or reset the timer to zero.  Timers can be added and removed, and each will have a unique number at the top.  Numbers reset to One if all timers are removed.
 
-##To-do
+## To-do
 Things to add in future updates:
 
 -use Date objects with a shorter interval frequency to more accurately detect time 
@@ -17,7 +17,7 @@ Things to add in future updates:
 
 -countdown timers / alarm timers
 
-##Implementation
+## Implementation
 Curious how you can build your own timers in React?  Check out this code snippet for a basic stopwatch component:
 
 ```javascript
