@@ -16,6 +16,12 @@ class Stopwatch extends React.Component {
         this.handleStopAndReset = this.handleStopAndReset.bind(this);
     }
 
+    componentWillUnmount(){
+        if(this.state.interval){
+            clearInterval(this.state.interval);
+        }
+    }
+
     handleStart() {
         if (this.state.interval) {
             return;
@@ -59,7 +65,7 @@ class Stopwatch extends React.Component {
         this.setState({
             seconds,
             minutes
-        })
+        });
     }
 
     stringify() {
@@ -88,8 +94,10 @@ class Stopwatch extends React.Component {
             <button onClick = {this.handleStop} > Stop </button> 
             <button onClick = {this.handleReset} > Reset </button> 
             <button onClick = {this.handleStopAndReset}> Stop And Reset </button> 
-            <p> By Nate Donato</p>
-            < a href = "https://github.com/natedonato/reactstopwatch/"> View source and documentation on Github</a>
+            
+            <button onClick={this.props.removeTimer}> REMOVE TIMER </button>
+            {/* <p> By Nate Donato</p>
+            < a href = "https://github.com/natedonato/reactstopwatch/"> View source and documentation on Github</a> */}
         </div>
         );
     }
