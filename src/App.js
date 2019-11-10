@@ -1,6 +1,6 @@
 import React from 'react';
+import './normalize.css'
 import './App.css';
-import Stopwatch from './stopwatch';
 import StopwatchesContainer from './stopwatchesContainer';
 
 function App() {
