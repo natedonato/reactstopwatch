@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reactstopwatch/static/css/main.789f8e64.chunk.css",
-    "main.js": "/reactstopwatch/static/js/main.7eb8c7bd.chunk.js",
-    "main.js.map": "/reactstopwatch/static/js/main.7eb8c7bd.chunk.js.map",
+    "main.css": "/reactstopwatch/static/css/main.ac11379d.chunk.css",
+    "main.js": "/reactstopwatch/static/js/main.6dd342cf.chunk.js",
+    "main.js.map": "/reactstopwatch/static/js/main.6dd342cf.chunk.js.map",
     "runtime~main.js": "/reactstopwatch/static/js/runtime~main.572a1a00.js",
     "runtime~main.js.map": "/reactstopwatch/static/js/runtime~main.572a1a00.js.map",
-    "static/js/2.4e81ba5b.chunk.js": "/reactstopwatch/static/js/2.4e81ba5b.chunk.js",
-    "static/js/2.4e81ba5b.chunk.js.map": "/reactstopwatch/static/js/2.4e81ba5b.chunk.js.map",
+    "static/js/2.0f58faaa.chunk.js": "/reactstopwatch/static/js/2.0f58faaa.chunk.js",
+    "static/js/2.0f58faaa.chunk.js.map": "/reactstopwatch/static/js/2.0f58faaa.chunk.js.map",
     "index.html": "/reactstopwatch/index.html",
-    "precache-manifest.a2cf3e205dcd67b5a912749e852c082f.js": "/reactstopwatch/precache-manifest.a2cf3e205dcd67b5a912749e852c082f.js",
+    "precache-manifest.52faceeae40b8e2c6720a21374153792.js": "/reactstopwatch/precache-manifest.52faceeae40b8e2c6720a21374153792.js",
     "service-worker.js": "/reactstopwatch/service-worker.js",
-    "static/css/main.789f8e64.chunk.css.map": "/reactstopwatch/static/css/main.789f8e64.chunk.css.map"
+    "static/css/main.ac11379d.chunk.css.map": "/reactstopwatch/static/css/main.ac11379d.chunk.css.map"
   }
 }
