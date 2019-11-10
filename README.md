@@ -17,7 +17,7 @@ Things to add in future updates:
 
 -countdown timers / alarm timers
 
-
+##Implementation
 Curious how you can build your own timers in React?  Check out this code snippet for a basic stopwatch component:
 
 ```javascript
